@@ -4,14 +4,14 @@
 }
 
 body {
-  background-color: #548687;
+  background-color: #79c4cf;
   text-align: center;
+  font-family: 'Arial', sans-serif;
 }
 
 .container {
   height: 70vh;
   display: flex;
-
   justify-content: center;
   align-items: center;
 }
@@ -24,28 +24,29 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1.5vmin;
+  border: 0.5vmin solid #ffffc7;
+  border-radius: 2rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
 }
 
 .box {
   height: 18vmin;
   width: 18vmin;
   border-radius: 1rem;
-  border: none;
+  border: 0.3vmin solid #bd0a0a;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
   font-size: 8vmin;
-  color: #b0413e;
+  color: #bd0a0a;
   background-color: #ffffc7;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-#reset-btn {
-  padding: 1rem;
-  font-size: 1.25rem;
-  background-color: #191913;
-  color: #fff;
-  border-radius: 1rem;
-  border: none;
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
 }
 
+#reset-btn,
 #new-btn {
   padding: 1rem;
   font-size: 1.25rem;
@@ -53,11 +54,21 @@ body {
   color: #fff;
   border-radius: 1rem;
   border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#reset-btn:hover,
+#new-btn:hover {
+  background-color: #333333;
+  transform: scale(1.05);
 }
 
 #msg {
   color: #ffffc7;
   font-size: 5vmin;
+  font-weight: bold;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 }
 
 .msg-container {
